@@ -1,0 +1,24 @@
+# Saidas geradas pelos fluxos
+out_data/
+.tmp/
+*.log
+!flow/tsmc65/_lib_prep/*.log
+
+# Bibliotecas binarias / IP do PDK (ficam em /pdk, nao versionar)
+*.ndm/
+*.ndm
+*.db
+*.ddc
+*.gds
+*.oas
+
+# Artefatos de ferramentas
+alib-52/
+command.log
+default.svf
+*.svf
+work/
+*.vcd
+*.fsdb
+csrc/
+simv*

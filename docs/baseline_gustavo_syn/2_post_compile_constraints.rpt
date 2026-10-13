@@ -1,0 +1,43 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : top_pad_rvx
+Version: W-2024.09-SP5-4
+Date   : Thu Sep 24 14:34:12 2026
+****************************************
+
+
+   max_transition
+
+                             Required        Actual
+   Net                      Transition     Transition        Slack
+   -----------------------------------------------------------------
+   gpio[0]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[1]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[2]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[3]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[4]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[5]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[6]                      5.00           9.14          -4.14  (VIOLATED)
+   gpio[7]                      5.00           9.14          -4.14  (VIOLATED)
+   i2c_scl                      5.00           9.14          -4.14  (VIOLATED)
+   i2c_sda                      5.00           9.14          -4.14  (VIOLATED)
+   mosi                         5.00           9.14          -4.14  (VIOLATED)
+   uart_tx                      5.00           9.14          -4.14  (VIOLATED)
+   cs                           5.00           9.14          -4.14  (VIOLATED)
+   sclk                         5.00           9.14          -4.14  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      14                -57.97  
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   top_pad_rvx                  0.00       684954.88      -684954.88
+                                                                    (VIOLATED)
+
+
+1

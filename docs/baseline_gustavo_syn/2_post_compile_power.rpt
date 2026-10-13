@@ -1,0 +1,88 @@
+ 
+****************************************
+Report : power
+        -analysis_effort low
+        -verbose
+Design : top_pad_rvx
+Version: W-2024.09-SP5-4
+Date   : Thu Sep 24 14:34:12 2026
+****************************************
+
+
+Library(s) Used:
+
+    tcbn65gpluswc0d72 (File: /pdk/tsmc/TSMC65_u105206/stdlib_u105206/tcbn65gplus_200a/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tcbn65gplus_200a/tcbn65gpluswc0d72.db)
+    tphn65lpnv2od3_slwc5 (File: /pdk/tsmc/TSMC65_u105206/stdlib_u105206/tphn65lpnv2od3_sl_200b/TSMCHOME/digital/Front_End/timing_power_noise/NLDM/tphn65lpnv2od3_sl_200b/tphn65lpnv2od3_slwc5.db)
+
+
+Operating Conditions: WC0D72COM   Library: tcbn65gpluswc0d72
+Wire Load Model Mode: segmented
+
+Design        Wire Load Model            Library
+------------------------------------------------
+top_pad_rvx            ZeroWireload      tcbn65gpluswc0d72
+rvx_1024__00000000_8_1 ZeroWireload      tcbn65gpluswc0d72
+rvx_core_00000000_1    ZeroWireload      tcbn65gpluswc0d72
+rvx_interconnect_NUM_PERIPHERALS6_616242
+                       ZeroWireload      tcbn65gpluswc0d72
+rvx_bootloader_rom     ZeroWireload      tcbn65gpluswc0d72
+rvx_tcm_1024__00001000 ZeroWireload      tcbn65gpluswc0d72
+rvx_uart               ZeroWireload      tcbn65gpluswc0d72
+rvx_timer              ZeroWireload      tcbn65gpluswc0d72
+rvx_gpio_GPIO_WIDTH8   ZeroWireload      tcbn65gpluswc0d72
+rvx_spi                ZeroWireload      tcbn65gpluswc0d72
+rvx_i2c                ZeroWireload      tcbn65gpluswc0d72
+rvx_core_bus_controller
+                       ZeroWireload      tcbn65gpluswc0d72
+rvx_core_pc_gen        ZeroWireload      tcbn65gpluswc0d72
+rvx_core_address_gen   ZeroWireload      tcbn65gpluswc0d72
+rvx_core_immediate_gen ZeroWireload      tcbn65gpluswc0d72
+rvx_core_decoder_ENABLE_ZMMUL1
+                       ZeroWireload      tcbn65gpluswc0d72
+rvx_core_state         ZeroWireload      tcbn65gpluswc0d72
+rvx_core_trap          ZeroWireload      tcbn65gpluswc0d72
+rvx_core_branch        ZeroWireload      tcbn65gpluswc0d72
+rvx_core_store_unit    ZeroWireload      tcbn65gpluswc0d72
+rvx_core_load_unit     ZeroWireload      tcbn65gpluswc0d72
+rvx_core_alu           ZeroWireload      tcbn65gpluswc0d72
+rvx_core_mdu           ZeroWireload      tcbn65gpluswc0d72
+rvx_core_integer_file  ZeroWireload      tcbn65gpluswc0d72
+rvx_core_csr_file_00000000
+                       ZeroWireload      tcbn65gpluswc0d72
+
+
+Global Operating Voltage = 0.72 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+
+  Cell Internal Power  =   2.3730 mW   (12%)
+  Net Switching Power  =  17.5436 mW   (88%)
+                         ---------
+Total Dynamic Power    =  19.9165 mW  (100%)
+
+Cell Leakage Power     = 550.2900 uW
+
+                 Internal         Switching           Leakage            Total                         Cell
+Power Group      Power            Power               Power              Power   (   %    )  Attrs  Count
+---------------------------------------------------------------------------------------------------------
+io_pad             0.6899           17.5327          684.9085           18.2233  (  89.04%)            30
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+clock_network      1.6671            0.0000            0.0000            1.6671  (   8.15%)            0
+                                                                                             i
+register       4.6110e-03        1.1356e-03        3.1937e+05            0.3251  (   1.59%)            10651
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)            0
+combinational  1.1411e-02        9.7033e-03        2.3024e+05            0.2514  (   1.23%)            34803
+---------------------------------------------------------------------------------------------------------
+Total              2.3730 mW        17.5436 mW     5.5029e+05 nW        20.4669 mW
+1

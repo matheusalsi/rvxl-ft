@@ -1,0 +1,318 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'top_pad_rvx' contains 2 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : top_pad_rvx
+Version: W-2024.09-SP5-4
+Date   : Thu Sep 24 14:35:26 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: WC0D72COM   Library: tcbn65gpluswc0d72
+Wire Load Model Mode: segmented
+
+  Startpoint: u_core/rvx_core_instance/rs1_data_s2_reg[5]
+              (rising edge-triggered flip-flop clocked by MY_CLK)
+  Endpoint: u_core/rvx_tightly_coupled_memory_instance/port0_rdata_reg[6]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  rvx_core_csr_file_00000000
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_integer_file
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_state     ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_bus_controller
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_i2c            ZeroWireload          tcbn65gpluswc0d72
+  rvx_spi            ZeroWireload          tcbn65gpluswc0d72
+  rvx_gpio_GPIO_WIDTH8
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_timer          ZeroWireload          tcbn65gpluswc0d72
+  rvx_uart           ZeroWireload          tcbn65gpluswc0d72
+  rvx_tcm_1024__00001000
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_bootloader_rom ZeroWireload          tcbn65gpluswc0d72
+  rvx_interconnect_NUM_PERIPHERALS6_616242
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_00000000_1
+                     ZeroWireload          tcbn65gpluswc0d72
+  top_pad_rvx        ZeroWireload          tcbn65gpluswc0d72
+  rvx_1024__00000000_8_1
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_mdu       ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_alu       ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_branch    ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_address_gen
+                     ZeroWireload          tcbn65gpluswc0d72
+  rvx_core_pc_gen    ZeroWireload          tcbn65gpluswc0d72
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             1.00       1.00
+  u_core/rvx_core_instance/rs1_data_s2_reg[5]/CP (DFCNQD1)
+                                                          0.00 #     1.00 r
+  u_core/rvx_core_instance/rs1_data_s2_reg[5]/Q (DFCNQD1)
+                                                          0.62       1.62 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/rs1_data_s2[5] (rvx_core_mdu)
+                                                          0.00       1.62 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U14/ZN (CKND0)
+                                                          0.55       2.17 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U89/ZN (CKND0)
+                                                          0.45       2.61 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U93/ZN (MAOI22D0)
+                                                          0.26       2.87 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U94/ZN (CKND0)
+                                                          0.11       2.98 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U102/ZN (CKND2D0)
+                                                          0.08       3.05 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U103/ZN (CKND0)
+                                                          0.26       3.31 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U120/Z (AO222D0)
+                                                          0.49       3.80 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U121/ZN (NR3D0)
+                                                          0.15       3.95 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U124/ZN (MAOI222D0)
+                                                          0.13       4.08 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U125/ZN (OAI31D0)
+                                                          0.13       4.21 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U154/ZN (INR2D0)
+                                                          0.20       4.41 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U160/ZN (OAI22D0)
+                                                          0.10       4.51 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U762/CO (FA1D0)
+                                                          0.25       4.76 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U764/ZN (NR2D0)
+                                                          0.11       4.87 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U774/ZN (MAOI22D0)
+                                                          0.20       5.07 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U776/ZN (INR2D0)
+                                                          0.17       5.23 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U822/ZN (OAI22D0)
+                                                          0.12       5.35 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U50/CO (FA1D0)
+                                                          0.23       5.58 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U49/CO (FA1D0)
+                                                          0.15       5.73 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U48/CO (FA1D0)
+                                                          0.15       5.87 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U47/CO (FA1D0)
+                                                          0.15       6.02 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U46/CO (FA1D0)
+                                                          0.15       6.17 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U45/CO (FA1D0)
+                                                          0.15       6.32 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U44/CO (FA1D0)
+                                                          0.15       6.47 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U43/CO (FA1D0)
+                                                          0.15       6.61 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U42/CO (FA1D0)
+                                                          0.15       6.76 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U41/CO (FA1D0)
+                                                          0.15       6.91 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U40/CO (FA1D0)
+                                                          0.15       7.06 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U39/CO (FA1D0)
+                                                          0.15       7.21 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U38/CO (FA1D0)
+                                                          0.15       7.35 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U37/CO (FA1D0)
+                                                          0.15       7.50 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U36/CO (FA1D0)
+                                                          0.15       7.65 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U35/CO (FA1D0)
+                                                          0.15       7.80 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U34/CO (FA1D0)
+                                                          0.15       7.95 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U33/CO (FA1D0)
+                                                          0.15       8.09 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U32/CO (FA1D0)
+                                                          0.15       8.24 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U31/CO (FA1D0)
+                                                          0.15       8.39 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U30/CO (FA1D0)
+                                                          0.15       8.54 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U29/CO (FA1D0)
+                                                          0.15       8.69 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U28/CO (FA1D0)
+                                                          0.15       8.83 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U27/CO (FA1D0)
+                                                          0.15       8.98 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U26/CO (FA1D0)
+                                                          0.15       9.13 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U25/CO (FA1D0)
+                                                          0.15       9.28 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U24/CO (FA1D0)
+                                                          0.15       9.42 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U23/CO (FA1D0)
+                                                          0.15       9.57 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U22/CO (FA1D0)
+                                                          0.15       9.72 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U21/CO (FA1D0)
+                                                          0.15       9.87 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U20/CO (FA1D0)
+                                                          0.15      10.02 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U19/CO (FA1D0)
+                                                          0.15      10.16 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U18/CO (FA1D0)
+                                                          0.15      10.31 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U17/CO (FA1D0)
+                                                          0.15      10.46 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U16/CO (FA1D0)
+                                                          0.15      10.61 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U15/CO (FA1D0)
+                                                          0.15      10.76 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U14/CO (FA1D0)
+                                                          0.15      10.90 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U13/CO (FA1D0)
+                                                          0.15      11.05 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U12/CO (FA1D0)
+                                                          0.15      11.20 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U11/CO (FA1D0)
+                                                          0.15      11.35 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U10/CO (FA1D0)
+                                                          0.15      11.50 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U9/CO (FA1D0)
+                                                          0.15      11.64 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U8/CO (FA1D0)
+                                                          0.15      11.79 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U7/CO (FA1D0)
+                                                          0.15      11.94 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U6/CO (FA1D0)
+                                                          0.15      12.09 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U5/CO (FA1D0)
+                                                          0.15      12.24 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U4/CO (FA1D0)
+                                                          0.15      12.38 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U3/CO (FA1D0)
+                                                          0.15      12.53 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/intadd_0/U2/CO (FA1D0)
+                                                          0.14      12.67 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U58/ZN (CKND0)
+                                                          0.05      12.72 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U62/ZN (MAOI222D0)
+                                                          0.11      12.83 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U200/ZN (CKND0)
+                                                          0.07      12.90 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U202/ZN (MAOI222D0)
+                                                          0.11      13.01 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U253/CO (FA1D0)
+                                                          0.26      13.27 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U733/ZN (OAI31D0)
+                                                          0.19      13.46 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U734/ZN (CKND2D0)
+                                                          0.10      13.57 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U735/ZN (OAI211D0)
+                                                          0.07      13.64 r
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/U736/ZN (OAI211D0)
+                                                          0.13      13.77 f
+  u_core/rvx_core_instance/gen_rvx_core_mdu.rvx_core_mdu_instance/mdu_output_s2[30] (rvx_core_mdu)
+                                                          0.00      13.77 f
+  u_core/rvx_core_instance/U18/ZN (AOI22D0)               0.18      13.95 r
+  u_core/rvx_core_instance/U78/ZN (ND4D0)                 0.14      14.09 f
+  u_core/rvx_core_instance/rvx_core_integer_file_instance/rd_data_s2[30] (rvx_core_integer_file)
+                                                          0.00      14.09 f
+  u_core/rvx_core_instance/rvx_core_integer_file_instance/U2193/ZN (CKND0)
+                                                          0.09      14.18 r
+  u_core/rvx_core_instance/rvx_core_integer_file_instance/U2216/ZN (AOI32D0)
+                                                          0.12      14.30 f
+  u_core/rvx_core_instance/rvx_core_integer_file_instance/rs1_data_s1[30] (rvx_core_integer_file)
+                                                          0.00      14.30 f
+  u_core/rvx_core_instance/rvx_core_branch_instance/rs1_data_s1[30] (rvx_core_branch)
+                                                          0.00      14.30 f
+  u_core/rvx_core_instance/rvx_core_branch_instance/U7/ZN (CKND2D0)
+                                                          0.13      14.42 r
+  u_core/rvx_core_instance/rvx_core_branch_instance/U22/ZN (OAI211D0)
+                                                          0.14      14.57 f
+  u_core/rvx_core_instance/rvx_core_branch_instance/U110/ZN (NR2D0)
+                                                          0.12      14.69 r
+  u_core/rvx_core_instance/rvx_core_branch_instance/U132/ZN (ND4D0)
+                                                          0.12      14.81 f
+  u_core/rvx_core_instance/rvx_core_branch_instance/U133/ZN (AOI211D0)
+                                                          0.22      15.03 r
+  u_core/rvx_core_instance/rvx_core_branch_instance/U139/ZN (AOI31D0)
+                                                          0.14      15.17 f
+  u_core/rvx_core_instance/rvx_core_branch_instance/U142/ZN (OAI32D0)
+                                                          0.18      15.35 r
+  u_core/rvx_core_instance/rvx_core_branch_instance/U143/ZN (OAI22D0)
+                                                          0.15      15.50 f
+  u_core/rvx_core_instance/rvx_core_branch_instance/U144/ZN (AOI21D0)
+                                                          0.12      15.62 r
+  u_core/rvx_core_instance/rvx_core_branch_instance/U145/Z (AO21D0)
+                                                          0.53      16.15 r
+  u_core/rvx_core_instance/rvx_core_branch_instance/take_branch_s1 (rvx_core_branch)
+                                                          0.00      16.15 r
+  u_core/rvx_core_instance/rvx_core_address_gen_instance/take_branch_s1 (rvx_core_address_gen)
+                                                          0.00      16.15 r
+  u_core/rvx_core_instance/rvx_core_address_gen_instance/U3/ZN (CKND0)
+                                                          0.42      16.57 f
+  u_core/rvx_core_instance/rvx_core_address_gen_instance/U117/ZN (OAI211D0)
+                                                          0.14      16.72 r
+  u_core/rvx_core_instance/rvx_core_address_gen_instance/U118/ZN (IOA21D0)
+                                                          0.08      16.79 f
+  u_core/rvx_core_instance/rvx_core_address_gen_instance/next_program_counter_s1[4] (rvx_core_address_gen)
+                                                          0.00      16.79 f
+  u_core/rvx_core_instance/rvx_core_pc_gen_instance/next_program_counter_s1[4] (rvx_core_pc_gen)
+                                                          0.00      16.79 f
+  u_core/rvx_core_instance/rvx_core_pc_gen_instance/U16/Z (AO222D0)
+                                                          0.34      17.13 f
+  u_core/rvx_core_instance/rvx_core_pc_gen_instance/program_counter_s0[4] (rvx_core_pc_gen)
+                                                          0.00      17.13 f
+  u_core/rvx_core_instance/rvx_core_bus_controller_instance/program_counter_s0[4] (rvx_core_bus_controller)
+                                                          0.00      17.13 f
+  u_core/rvx_core_instance/rvx_core_bus_controller_instance/U92/Z (AO22D0)
+                                                          0.25      17.38 f
+  u_core/rvx_core_instance/rvx_core_bus_controller_instance/ibus_address[4] (rvx_core_bus_controller)
+                                                          0.00      17.38 f
+  u_core/rvx_core_instance/ibus_address[4] (rvx_core_00000000_1)
+                                                          0.00      17.38 f
+  u_core/rvx_tightly_coupled_memory_instance/port0_address[4] (rvx_tcm_1024__00001000)
+                                                          0.00      17.38 f
+  u_core/rvx_tightly_coupled_memory_instance/U6016/ZN (CKND0)
+                                                          0.09      17.47 r
+  u_core/rvx_tightly_coupled_memory_instance/U6017/ZN (ND3D0)
+                                                          0.45      17.91 f
+  u_core/rvx_tightly_coupled_memory_instance/U6067/ZN (NR2D0)
+                                                          0.68      18.59 r
+  u_core/rvx_tightly_coupled_memory_instance/U6068/Z (CKBD0)
+                                                          0.62      19.22 r
+  u_core/rvx_tightly_coupled_memory_instance/U9230/ZN (AOI22D0)
+                                                          0.23      19.44 f
+  u_core/rvx_tightly_coupled_memory_instance/U9231/ZN (ND4D0)
+                                                          0.12      19.56 r
+  u_core/rvx_tightly_coupled_memory_instance/U9242/ZN (NR4D0)
+                                                          0.06      19.62 f
+  u_core/rvx_tightly_coupled_memory_instance/U9306/ZN (ND4D0)
+                                                          0.05      19.67 r
+  u_core/rvx_tightly_coupled_memory_instance/U9392/Z (MUX2D0)
+                                                          0.12      19.79 r
+  u_core/rvx_tightly_coupled_memory_instance/U9393/Z (CKAN2D0)
+                                                          0.12      19.91 r
+  u_core/rvx_tightly_coupled_memory_instance/port0_rdata_reg[6]/D (DFCNQD1)
+                                                          0.00      19.91 r
+  data arrival time                                                 19.91
+
+  clock MY_CLK (rise edge)                               30.00      30.00
+  clock network delay (ideal)                             1.00      31.00
+  clock uncertainty                                      -1.00      30.00
+  u_core/rvx_tightly_coupled_memory_instance/port0_rdata_reg[6]/CP (DFCNQD1)
+                                                          0.00      30.00 r
+  library setup time                                     -0.02      29.98
+  data required time                                                29.98
+  --------------------------------------------------------------------------
+  data required time                                                29.98
+  data arrival time                                                -19.91
+  --------------------------------------------------------------------------
+  slack (MET)                                                       10.07
+
+
+1
